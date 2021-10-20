@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Database1Entities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="courses" EntityType="Database1Model.cours" />
+    <EntitySet Name="enrolls" EntityType="Database1Model.enroll" />
+    <EntitySet Name="faqs" EntityType="Database1Model.faq" />
+    <EntitySet Name="locations" EntityType="Database1Model.location" />
+    <EntitySet Name="registers" EntityType="Database1Model.register" />
+    <EntitySet Name="videos" EntityType="Database1Model.video" />
+    <AssociationSet Name="FK__enroll__c_id__473C8FC7" Association="Database1Model.FK__enroll__c_id__473C8FC7">
+      <End Role="cours" EntitySet="courses" />
+      <End Role="enroll" EntitySet="enrolls" />
+    </AssociationSet>
+    <EntitySet Name="entance_exams" EntityType="Database1Model.entance_exams" />
+    <AssociationSet Name="FK__entance_e__roll___00750D23" Association="Database1Model.FK__entance_e__roll___00750D23">
+      <End Role="enroll" EntitySet="enrolls" />
+      <End Role="entance_exams" EntitySet="entance_exams" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cours">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="c_image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="c_fees" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="enrolls" Relationship="Database1Model.FK__enroll__c_id__473C8FC7" FromRole="cours" ToRole="enroll" />
+  </EntityType>
+  <EntityType Name="enroll">
+    <Key>
+      <PropertyRef Name="enroll_id" />
+    </Key>
+    <Property Name="enroll_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cell" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="cours" Relationship="Database1Model.FK__enroll__c_id__473C8FC7" FromRole="enroll" ToRole="cours" />
+    <NavigationProperty Name="entance_exams" Relationship="Database1Model.FK__entance_e__roll___00750D23" FromRole="enroll" ToRole="entance_exams" />
+  </EntityType>
+  <EntityType Name="faq">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="q" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="a" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="location">
+    <Key>
+      <PropertyRef Name="l_id" />
+    </Key>
+    <Property Name="l_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Telephone" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="full_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="role_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="video">
+    <Key>
+      <PropertyRef Name="v_id" />
+    </Key>
+    <Property Name="v_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="lecture_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="video_path" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__enroll__c_id__473C8FC7">
+    <End Type="Database1Model.cours" Role="cours" Multiplicity="1" />
+    <End Type="Database1Model.enroll" Role="enroll" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="cours">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="enroll">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="entance_exams">
+    <Key>
+      <PropertyRef Name="roll_num" />
+    </Key>
+    <Property Name="roll_num" Type="Int32" Nullable="false" />
+    <Property Name="marks" Type="Int32" Nullable="false" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <Property Name="fees" Type="Int32" Nullable="false" />
+    <Property Name="s_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cell" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="enroll" Relationship="Database1Model.FK__entance_e__roll___00750D23" FromRole="entance_exams" ToRole="enroll" />
+  </EntityType>
+  <Association Name="FK__entance_e__roll___00750D23">
+    <End Type="Database1Model.enroll" Role="enroll" Multiplicity="1" />
+    <End Type="Database1Model.entance_exams" Role="entance_exams" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="enroll">
+        <PropertyRef Name="enroll_id" />
+      </Principal>
+      <Dependent Role="entance_exams">
+        <PropertyRef Name="roll_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

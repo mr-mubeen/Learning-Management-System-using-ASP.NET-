@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Symphony.cours>
+
+@{
+    ViewBag.Title = "course_view";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "admin_add_course")
+</p>
+
+<!--? Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="~/FrontEnd/assets/img/logo/loder.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<!--? Hero Start -->
+<div class="slider-area ">
+    <div class="slider-height2 d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="hero-cap hero-cap2 text-center">
+                        <h2>All Courses</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+
+        <div class="container">
+
+ 
+            <br /><br />
+@foreach (var item in Model)
+            {
+       
+                  <div class="container" style="width : 350px; height:500px;  display:inline-block; margin-left:30px;">
+
+                      <div class="card" style="width: 350px; height:500px; ">
+                          <img class="card-img-top" src="@Url.Content(item.c_image)" height=250px; alt="Card image cap">
+                          <div class="card-body">
+                              <h3 class="card-title">@Html.DisplayFor(modelItem => item.c_name)</h3>
+                              <br />
+                              <h4 class="card-text"> FEES @Html.DisplayFor(modelItem => item.c_fees) PKR <br /> Duration 6 Months</h4>
+                              <br />
+                              <a href="@Url.Action("student_lecture_view" , "Home")" class="btn btn-primary">GO TO THE COURSE</a>
+                          </div>
+                      </div>
+
+                      
+                      <br /><br />
+                  </div>
+
+            }
+
+        </div>

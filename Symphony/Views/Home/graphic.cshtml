@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "graphic";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+}
+
+<h2>graphic</h2>
+
+
+@using (Html.BeginForm("graphic", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.TextBox("videofile", "", new { type = "file" })
+    <input type="submit" value="Upload Video Files" />
+}
+
+
+@foreach (var item in Model)
+{
+    <div class="col-sm-12 col-md-6 col-lg-4">
+
+        @item.v_name
+
+        <div class="video-frames">
+            <video controls>
+                <source src="@Url.Content(@item.v_path)" type="video/mp4" />
+            </video>
+        </div>
+    </div>
+}

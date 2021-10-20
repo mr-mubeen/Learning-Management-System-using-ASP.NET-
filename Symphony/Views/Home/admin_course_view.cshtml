@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Symphony.cours>
+
+@{
+    ViewBag.Title = "admin_course_view";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+@Html.Raw(TempData["msg"])
+
+<h2>Course Details Admin Pannel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "admin_add_course")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.c_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_fees)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_name)
+        </td>
+        <td>
+           <img src="@Url.Content(item.c_image)" height=250px; width=250px />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.c_fees)
+        </td>
+        <td>
+            
+            @Html.ActionLink("Delete", "admin_course_delete", new { id=item.c_id })
+        </td>
+    </tr>
+}
+
+</table>

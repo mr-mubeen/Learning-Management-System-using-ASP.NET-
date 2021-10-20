@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Symphony.video>
+
+@{
+    ViewBag.Title = "admin_lectures_view";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+@Html.Raw(ViewData["message"])
+@Html.Raw(TempData["msg"])
+
+<h2>Lectures Details Admin Pannel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "admin_lectures_create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.lecture_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.video_path)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.c_id)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.lecture_name)
+            </td>
+            <td>
+                <video controls style="width:400px; height:300px;  display:inline-block">
+                    <source src="@Url.Content(@item.video_path)" type="video/mp4" />
+                </video>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.c_id)
+            </td>
+            <td>
+
+                @Html.ActionLink("Delete", "admin_lectures_delete", new { id = item.v_id })
+            </td>
+        </tr>
+    }
+
+</table>

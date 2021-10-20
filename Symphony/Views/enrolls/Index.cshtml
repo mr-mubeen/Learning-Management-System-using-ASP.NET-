@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Symphony.enroll>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+<h2>Enroll Admin Page</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.s_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cell)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cours.c_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.s_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cell)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cours.c_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.enroll_id })  |
+            @Html.ActionLink("Details", "Details", new { id=item.enroll_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.enroll_id })
+        </td>
+    </tr>
+}
+
+</table>

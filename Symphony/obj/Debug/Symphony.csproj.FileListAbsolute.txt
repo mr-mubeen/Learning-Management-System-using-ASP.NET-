@@ -1,0 +1,146 @@
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Symphony.dll.config
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Symphony.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Symphony.pdb
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csc.exe
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csc.exe.config
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csc.rsp
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csi.exe
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csi.exe.config
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\csi.rsp
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.AppContext.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Console.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.IO.Compression.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Claims.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.ValueTuple.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\vbc.exe
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\vbc.exe.config
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\vbc.rsp
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\VBCSCompiler.exe
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Helpers.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Mvc.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Razor.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.Razor.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Razor.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Webpages.Razor.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Helpers.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\System.Web.Mvc.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\obj\Debug\Symphony.csprojAssemblyReference.cache
+C:\Users\Mubeen\source\repos\Symphony\Symphony\obj\Debug\Symphony.csproj.CoreCompileInputs.cache
+C:\Users\Mubeen\source\repos\Symphony\Symphony\obj\Debug\Symphony.csproj.CopyComplete
+C:\Users\Mubeen\source\repos\Symphony\Symphony\obj\Debug\Symphony.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\obj\Debug\Symphony.pdb
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\EntityFramework.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\EntityFramework.SqlServer.dll
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\EntityFramework.xml
+C:\Users\Mubeen\source\repos\Symphony\Symphony\bin\EntityFramework.SqlServer.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Symphony.dll.config
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Symphony.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Symphony.pdb
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csc.exe
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csc.exe.config
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csc.rsp
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csi.exe
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csi.exe.config
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\csi.rsp
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.CSharp.Core.targets
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.Managed.Core.targets
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\Microsoft.VisualBasic.Core.targets
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.AppContext.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Collections.Immutable.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Console.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Diagnostics.StackTrace.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.IO.Compression.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.IO.FileSystem.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.IO.FileSystem.Primitives.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.IO.Pipes.AccessControl.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.IO.Pipes.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Reflection.Metadata.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.AccessControl.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Claims.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Encoding.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.Primitives.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Security.Principal.Windows.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Text.Encoding.CodePages.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.ValueTuple.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Xml.ReaderWriter.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Xml.XmlDocument.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Xml.XPath.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\System.Xml.XPath.XDocument.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\vbc.exe
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\vbc.exe.config
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\vbc.rsp
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\VBCSCompiler.exe
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\roslyn\VBCSCompiler.exe.config
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\EntityFramework.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\EntityFramework.SqlServer.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Microsoft.Web.Infrastructure.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Helpers.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Mvc.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Razor.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.Deployment.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.Razor.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\EntityFramework.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\EntityFramework.SqlServer.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Razor.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.Deployment.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Webpages.Razor.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Helpers.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\System.Web.Mvc.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\obj\Debug\Symphony.csprojAssemblyReference.cache
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\obj\Debug\Symphony.csproj.CoreCompileInputs.cache
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\obj\Debug\Symphony.csproj.CopyComplete
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\obj\Debug\Symphony.dll
+L:\New projects visual studio 2017 from june 2020\Symphony\Symphony\obj\Debug\Symphony.pdb

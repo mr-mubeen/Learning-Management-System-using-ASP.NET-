@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Symphony.faq>
+
+@{
+    ViewBag.Title = "admin_faq_view";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+@Html.Raw(TempData["DeleteMessage"])
+
+<h2>FAQ Details Admin Pannel</h2>
+
+<p>
+    @Html.ActionLink("Create New", "admin_faq_create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.q)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.a)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.q)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.a)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "admin_faq_edit", new { id=item.f_id }) |
+           
+            @Html.ActionLink("Delete", "admin_faq_delete", new { id=item.f_id })
+        </td>
+    </tr>
+}
+
+</table>

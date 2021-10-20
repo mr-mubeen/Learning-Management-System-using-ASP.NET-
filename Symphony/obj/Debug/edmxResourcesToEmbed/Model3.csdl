@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="account">
+    <Key>
+      <PropertyRef Name="a_id" />
+    </Key>
+    <Property Name="a_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fees" Type="Int32" Nullable="false" />
+    <Property Name="roll_num" Type="Int32" Nullable="false" />
+    <Property Name="month" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="student" Relationship="Self.FK__accounts__roll_n__267ABA7A" FromRole="accounts" ToRole="student" />
+    <NavigationProperty Name="students" Relationship="Self.FK__student__a_id__3B75D760" FromRole="accounts" ToRole="student" />
+  </EntityType>
+  <EntityType Name="assignment">
+    <Key>
+      <PropertyRef Name="ass_id" />
+    </Key>
+    <Property Name="ass_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ass_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <Property Name="obt_marks" Type="Int32" Nullable="false" />
+    <Property Name="tot_marks" Type="Int32" Nullable="false" />
+    <Property Name="due_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="roll_num" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="course" Relationship="Self.FK__assignment__c_id__36B12243" FromRole="assignment" ToRole="course" />
+    <NavigationProperty Name="students" Relationship="Self.FK__student__ass_id__3C69FB99" FromRole="assignment" ToRole="student" />
+  </EntityType>
+  <EntityType Name="course">
+    <Key>
+      <PropertyRef Name="c_id" />
+    </Key>
+    <Property Name="c_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="c_duration" Type="Int32" Nullable="false" />
+    <Property Name="c_fees" Type="Int32" Nullable="false" />
+    <Property Name="f_id" Type="Int32" Nullable="false" />
+    <Property Name="c_image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <NavigationProperty Name="assignments" Relationship="Self.FK__assignment__c_id__36B12243" FromRole="course" ToRole="assignment" />
+    <NavigationProperty Name="faculty" Relationship="Self.FK__course__f_id__33D4B598" FromRole="course" ToRole="faculty" />
+    <NavigationProperty Name="exams" Relationship="Self.FK__exam__c_id__38996AB5" FromRole="course" ToRole="exam" />
+    <NavigationProperty Name="students" Relationship="Self.FK__student__c_id__398D8EEE" FromRole="course" ToRole="student" />
+  </EntityType>
+  <EntityType Name="exam">
+    <Key>
+      <PropertyRef Name="e_id" />
+    </Key>
+    <Property Name="e_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="e_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="e_duration" Type="Int32" Nullable="false" />
+    <Property Name="obt_marks" Type="Int32" Nullable="false" />
+    <Property Name="total_marks" Type="Int32" Nullable="false" />
+    <Property Name="roll_num" Type="Int32" Nullable="false" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <Property Name="e_date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="course" Relationship="Self.FK__exam__c_id__38996AB5" FromRole="exam" ToRole="course" />
+    <NavigationProperty Name="student" Relationship="Self.FK__exam__roll_num__37A5467C" FromRole="exam" ToRole="student" />
+    <NavigationProperty Name="students" Relationship="Self.FK__student__e_id__3A81B327" FromRole="exam" ToRole="student" />
+  </EntityType>
+  <EntityType Name="faculty">
+    <Key>
+      <PropertyRef Name="f_id" />
+    </Key>
+    <Property Name="f_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="f_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cell" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="videos" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="courses" Relationship="Self.FK__course__f_id__33D4B598" FromRole="faculty" ToRole="course" />
+  </EntityType>
+  <EntityType Name="register">
+    <Key>
+      <PropertyRef Name="r_id" />
+    </Key>
+    <Property Name="r_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="role_id" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="student">
+    <Key>
+      <PropertyRef Name="roll_num" />
+    </Key>
+    <Property Name="roll_num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="s_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="father_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cell" Type="Int32" Nullable="false" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="c_id" Type="Int32" Nullable="false" />
+    <Property Name="e_id" Type="Int32" Nullable="false" />
+    <Property Name="a_id" Type="Int32" Nullable="false" />
+    <Property Name="ass_id" Type="Int32" Nullable="false" />
+    <Property Name="role" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="accounts" Relationship="Self.FK__accounts__roll_n__267ABA7A" FromRole="student" ToRole="accounts" />
+    <NavigationProperty Name="account" Relationship="Self.FK__student__a_id__3B75D760" FromRole="student" ToRole="accounts" />
+    <NavigationProperty Name="assignment" Relationship="Self.FK__student__ass_id__3C69FB99" FromRole="student" ToRole="assignment" />
+    <NavigationProperty Name="course" Relationship="Self.FK__student__c_id__398D8EEE" FromRole="student" ToRole="course" />
+    <NavigationProperty Name="exams" Relationship="Self.FK__exam__roll_num__37A5467C" FromRole="student" ToRole="exam" />
+    <NavigationProperty Name="exam" Relationship="Self.FK__student__e_id__3A81B327" FromRole="student" ToRole="exam" />
+  </EntityType>
+  <Association Name="FK__accounts__roll_n__267ABA7A">
+    <End Role="student" Type="Self.student" Multiplicity="1" />
+    <End Role="accounts" Type="Self.account" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="roll_num" />
+      </Principal>
+      <Dependent Role="accounts">
+        <PropertyRef Name="roll_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__a_id__3B75D760">
+    <End Role="accounts" Type="Self.account" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="accounts">
+        <PropertyRef Name="a_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="a_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__assignment__c_id__36B12243">
+    <End Role="course" Type="Self.course" Multiplicity="1" />
+    <End Role="assignment" Type="Self.assignment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="assignment">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__ass_id__3C69FB99">
+    <End Role="assignment" Type="Self.assignment" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="assignment">
+        <PropertyRef Name="ass_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="ass_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__course__f_id__33D4B598">
+    <End Role="faculty" Type="Self.faculty" Multiplicity="1" />
+    <End Role="course" Type="Self.course" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="faculty">
+        <PropertyRef Name="f_id" />
+      </Principal>
+      <Dependent Role="course">
+        <PropertyRef Name="f_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__exam__c_id__38996AB5">
+    <End Role="course" Type="Self.course" Multiplicity="1" />
+    <End Role="exam" Type="Self.exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="exam">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__c_id__398D8EEE">
+    <End Role="course" Type="Self.course" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="course">
+        <PropertyRef Name="c_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="c_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__exam__roll_num__37A5467C">
+    <End Role="student" Type="Self.student" Multiplicity="1" />
+    <End Role="exam" Type="Self.exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student">
+        <PropertyRef Name="roll_num" />
+      </Principal>
+      <Dependent Role="exam">
+        <PropertyRef Name="roll_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student__e_id__3A81B327">
+    <End Role="exam" Type="Self.exam" Multiplicity="1" />
+    <End Role="student" Type="Self.student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="exam">
+        <PropertyRef Name="e_id" />
+      </Principal>
+      <Dependent Role="student">
+        <PropertyRef Name="e_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Database1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="accounts" EntityType="Self.account" />
+    <EntitySet Name="assignments" EntityType="Self.assignment" />
+    <EntitySet Name="courses" EntityType="Self.course" />
+    <EntitySet Name="exams" EntityType="Self.exam" />
+    <EntitySet Name="faculties" EntityType="Self.faculty" />
+    <EntitySet Name="registers" EntityType="Self.register" />
+    <EntitySet Name="students" EntityType="Self.student" />
+    <AssociationSet Name="FK__accounts__roll_n__267ABA7A" Association="Self.FK__accounts__roll_n__267ABA7A">
+      <End Role="student" EntitySet="students" />
+      <End Role="accounts" EntitySet="accounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__a_id__3B75D760" Association="Self.FK__student__a_id__3B75D760">
+      <End Role="accounts" EntitySet="accounts" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__assignment__c_id__36B12243" Association="Self.FK__assignment__c_id__36B12243">
+      <End Role="course" EntitySet="courses" />
+      <End Role="assignment" EntitySet="assignments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__ass_id__3C69FB99" Association="Self.FK__student__ass_id__3C69FB99">
+      <End Role="assignment" EntitySet="assignments" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__course__f_id__33D4B598" Association="Self.FK__course__f_id__33D4B598">
+      <End Role="faculty" EntitySet="faculties" />
+      <End Role="course" EntitySet="courses" />
+    </AssociationSet>
+    <AssociationSet Name="FK__exam__c_id__38996AB5" Association="Self.FK__exam__c_id__38996AB5">
+      <End Role="course" EntitySet="courses" />
+      <End Role="exam" EntitySet="exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__c_id__398D8EEE" Association="Self.FK__student__c_id__398D8EEE">
+      <End Role="course" EntitySet="courses" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__exam__roll_num__37A5467C" Association="Self.FK__exam__roll_num__37A5467C">
+      <End Role="student" EntitySet="students" />
+      <End Role="exam" EntitySet="exams" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student__e_id__3A81B327" Association="Self.FK__student__e_id__3A81B327">
+      <End Role="exam" EntitySet="exams" />
+      <End Role="student" EntitySet="students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

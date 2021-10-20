@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Results";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
+}
+<!--? Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="assets/img/logo/loder.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<br />
+<div style="padding:50px; font-size40px;" class="container">
+    <div class="card" style=" display:inline-block; width:450px; height:400px;">
+        <img src="~/FrontEnd/Doc/img/a.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title">Entrance Exam Result</h2>
+            <a href="@Url.Action("Index_view","entance_exams")" class="btn btn-primary">Check Results</a>
+        </div>
+    </div>
+
+</div>
+
+
+

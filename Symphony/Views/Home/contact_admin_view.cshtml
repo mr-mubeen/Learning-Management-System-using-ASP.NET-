@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Symphony.location>
+
+@{
+    ViewBag.Title = "contact_admin_view";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+@Html.Raw(TempData["msg"])
+@Html.Raw(TempData["DeleteMessage"])
+
+<h2>Location Details / ADMIN PANNEL</h2>
+<br /><br />
+
+
+    <p>
+        @Html.ActionLink("Create New", "contact_admin_create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Telephone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telephone)
+            </td>
+            <td>
+               <img src="@Url.Content(item.image)" width="250px" height="250px;"/>
+            </td>
+            <td>
+               
+
+                @Html.ActionLink("Delete", "contact_admin_delete", new { id = item.l_id })
+            </td>
+        </tr>
+        }
+
+    </table>
+
+
+

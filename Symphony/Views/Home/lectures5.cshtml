@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Symphony.video>
+
+@{
+    ViewBag.Title = "lectures5";
+    Layout = "~/Views/Shared/_FrontEndLayout.cshtml";
+}
+
+
+
+<div style="margin-top:100px; margin-bottom:100px" class="container">
+    <h2>Lectures</h2>
+    @foreach (var item in Model)
+
+    {
+        if (item.c_id == 5)
+        {
+            <div class="video-frames" style="width:350px; height:300px; margin-left:120px;; display:inline-block">
+                <h3> @item.lecture_name</h3>
+
+                <video controls style="width:400px; height:300px;  display:inline-block">
+                    <source src="@Url.Content(@item.video_path)" type="video/mp4" />
+                </video>
+            </div>
+        }
+
+
+
+    }
+
+    <br /><br /><br />
+</div>

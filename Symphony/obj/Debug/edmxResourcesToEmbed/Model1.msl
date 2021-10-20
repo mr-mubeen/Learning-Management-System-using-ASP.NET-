@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities6">
+    <EntitySetMapping Name="courses">
+      <EntityTypeMapping TypeName="Database1Model.cours">
+        <MappingFragment StoreEntitySet="courses">
+          <ScalarProperty Name="c_fees" ColumnName="c_fees" />
+          <ScalarProperty Name="c_image" ColumnName="c_image" />
+          <ScalarProperty Name="c_name" ColumnName="c_name" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="enrolls">
+      <EntityTypeMapping TypeName="Database1Model.enroll">
+        <MappingFragment StoreEntitySet="enroll">
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="cell" ColumnName="cell" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="enroll_id" ColumnName="enroll_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faqs">
+      <EntityTypeMapping TypeName="Database1Model.faq">
+        <MappingFragment StoreEntitySet="faq">
+          <ScalarProperty Name="a" ColumnName="a" />
+          <ScalarProperty Name="q" ColumnName="q" />
+          <ScalarProperty Name="f_id" ColumnName="f_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="locations">
+      <EntityTypeMapping TypeName="Database1Model.location">
+        <MappingFragment StoreEntitySet="locations">
+          <ScalarProperty Name="image" ColumnName="image" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="l_id" ColumnName="l_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="registers">
+      <EntityTypeMapping TypeName="Database1Model.register">
+        <MappingFragment StoreEntitySet="register">
+          <ScalarProperty Name="role_id" ColumnName="role_id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videos">
+      <EntityTypeMapping TypeName="Database1Model.video">
+        <MappingFragment StoreEntitySet="videos">
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="video_path" ColumnName="video_path" />
+          <ScalarProperty Name="lecture_name" ColumnName="lecture_name" />
+          <ScalarProperty Name="v_id" ColumnName="v_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="entance_exams">
+      <EntityTypeMapping TypeName="Database1Model.entance_exams">
+        <MappingFragment StoreEntitySet="entance_exams">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="cell" ColumnName="cell" />
+          <ScalarProperty Name="s_name" ColumnName="s_name" />
+          <ScalarProperty Name="fees" ColumnName="fees" />
+          <ScalarProperty Name="c_id" ColumnName="c_id" />
+          <ScalarProperty Name="marks" ColumnName="marks" />
+          <ScalarProperty Name="roll_num" ColumnName="roll_num" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

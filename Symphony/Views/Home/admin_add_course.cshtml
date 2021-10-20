@@ -1,0 +1,59 @@
+﻿@model Symphony.cours
+
+@{
+    ViewBag.Title = "admin_add_course";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+@Html.Raw(ViewData["msg"])
+
+<h2>Course Details Admin Pannel</h2>
+
+@using (Html.BeginForm("admin_add_course", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>cours</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.c_name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.c_name, new { htmlAttributes = new { @class = "form-control" , @required = true } })
+            @Html.ValidationMessageFor(model => model.c_name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.c_image, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            <input type="file" name="imagefile" required />
+            <br />
+        </div>
+    </div>
+    <br />
+
+
+    <div class="form-group">
+       
+        <div class="col-md-10">
+            @Html.LabelFor(model => model.c_fees, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.EditorFor(model => model.c_fees, new { htmlAttributes = new { @class = "form-control", @Value = 6000, @ReadOnly = true } })
+            @Html.ValidationMessageFor(model => model.c_fees, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Add" class="btn btn-default" style="border:1px solid black; background-color:blue; color:white"/>
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "admin_course_view")
+</div>

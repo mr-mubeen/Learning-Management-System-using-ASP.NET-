@@ -1,0 +1,91 @@
+﻿@model Symphony.entance_exams
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+ @ViewData["a"]
+@ViewBag.msg
+<h2>Entrance Exam Details Admin Pannel</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <h4>entance_exams</h4>
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.roll_num, "roll_num", htmlAttributes: new { @class = "control-label col-md-2" })
+        <br />
+        <div class="col-md-10">
+            @Html.DropDownList("roll_num", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.roll_num, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        <br />
+        @Html.LabelFor(model => model.s_name, htmlAttributes: new { @class = "control-label col-md-2" })
+        <br />
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.s_name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.s_name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.marks, htmlAttributes: new { @class = "control-label col-md-2" })<br />
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.marks, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.marks, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.LabelFor(model => model.c_id, "c_id", htmlAttributes: new { @class = "control-label col-md-2" })<br />
+        <div class="col-md-10">
+            @Html.DropDownList("c_id", null, htmlAttributes: new { @class = "form-control" })<br />
+            @Html.ValidationMessageFor(model => model.c_id, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <br />
+
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.cell, htmlAttributes: new { @class = "control-label col-md-2" })<br />
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.cell, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.cell, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <br />
+        @Html.LabelFor(model => model.fees, htmlAttributes: new { @class = "control-label col-md-2" })<br />
+        <div class="col-md-10">
+            @Html.DropDownList("Fees", new List<SelectListItem>
+ {
+     new SelectListItem { Text = "6000", Value = "6000", Selected=true},
+     new SelectListItem { Text = "7000", Value = "7000"},
+     new SelectListItem { Text = "7500", Value = "7500"}
+ }, "Select Fees")
+            @Html.ValidationMessageFor(model => model.fees, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10" >
+            <input type="submit" value="Submit" class="btn btn-default" style="border:1px solid black; background-color:blue; color:white"/>
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

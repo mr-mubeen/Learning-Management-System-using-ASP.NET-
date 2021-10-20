@@ -1,0 +1,49 @@
+﻿@model Symphony.enroll
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_BackEndLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>enroll</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.s_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.s_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cell)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cell)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cours.c_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cours.c_name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" style="border:1px solid black; background-color:blue; color:white" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
